@@ -1,0 +1,16 @@
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar carpetas y archivos temporales de editores comunes
+.vscode/
+.idea/
+*.log
+*.tmp
+
+# Ignorar archivos compilados o builds si los tuvieras (por si en el futuro usas SASS u otro preprocesador)
+dist/
+build/
+
+# node_modules (por si en el futuro usas Node.js)
+node_modules/
