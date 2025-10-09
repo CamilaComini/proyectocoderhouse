@@ -4,29 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Camila Comini">
+  <meta name="description" content="Conocé a Punto LAN: nuestra historia, misión y equipo de trabajo.">
   <link rel="stylesheet" href="../css/style.css">
   <title>Nosotros - Punto LAN</title>
 </head>
 <body id="body">
 
-  <!-- Encabezado superior con logo y carrito -->
+   <!-- Header -->
   <header id="header">
-    <a href="carrito.html">
-      <img src="../imagenes/carrito.png" alt="Ir al carrito de compras" class="carrito">
-    </a>
-    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo de Punto LAN">
-  </header>
+    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
 
-  <!-- Menú de navegación -->
-  <nav id="nav">
-    <ul class="ul">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="productos.html">Productos</a></li>
-      <li><a href="armatupc.html">Arma Tu PC</a></li>
-      <li><a href="nosotros.html" class="activo">Nosotros</a></li>
-      <li><a href="ayuda.html">Ayuda</a></li>
-    </ul>
-  </nav>
+    <nav id="nav" aria-label="Navegación principal">
+      <ul class="ul">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./productos.html">Productos</a></li>
+        <li><a href="./armatupc.html">Arma Tu PC</a></li>
+        <li><a href="#" class="activo">Nosotros</a></li>
+        <li><a href="./ayuda.html">Ayuda</a></li>
+      </ul>
+    </nav>
+
+    <!-- Carrito con contador -->
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
+      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
+      <span id="contador-carrito" class="contador">0</span>
+    </a>
+  </header>
 
   <!-- Contenido principal -->
   <main>
@@ -49,27 +53,23 @@
     </section>
   </main>
 
-  <!-- Pie de página -->
-  <footer id="footer">
+   <footer id="footer">
     <article class="redes">
-      <h4>SEGUINOS</h4>
-      <a href="#"><img src="../iconos/logofacebook.png" alt="Facebook"></a>
-      <a href="#"><img src="../iconos/logoinstagram.png" alt="Instagram"></a>
+      <h4>Seguinos</h4>
+      <a href="#" aria-label="Facebook"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook" /></a>
+      <a href="#" aria-label="Instagram"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram" /></a>
     </article>
-
     <article class="wsp">
-      <h4>COMUNICATE CON NOSOTROS</h4>
-      <img src="../iconos/logowhatsapp.webp" alt="WhatsApp">
+      <h4>Comunicate con Nosotros</h4>
+      <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp" />
     </article>
-
     <article class="boton">
-      <button onclick="location.href='ayuda.html'">AYUDA</button>
-      <button type="button">TÉRMINOS Y CONDICIONES</button>
+      <button onclick="location.href='./ayuda.html'">Ayuda</button>
+      <button type="button">Términos y Condiciones</button>
     </article>
-
     <article class="logo">
-      <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo de Punto LAN">
-      <p>Punto LAN - Todos los derechos reservados</p>
+      <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
+      <p>Punto LAN - Derechos Reservados</p>
     </article>
   </footer>
 

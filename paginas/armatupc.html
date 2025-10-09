@@ -12,57 +12,57 @@
 
   <!-- Header -->
   <header id="header">
-    <a href="carrito.html">
-      <img src="imagenes/carrito.png" alt="Carrito" class="carrito">
-    </a>
-    <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN">
-  </header>
+    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
 
-  <!-- Navegación -->
-  <header id="head">
-    <nav id="nav">
+    <nav id="nav" aria-label="Navegación principal">
       <ul class="ul">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="armatupc.html" class="activo">Arma Tu PC</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="ayuda.html">Ayuda</a></li>
+        <li><a href="./productos.html">Productos</a></li>
+        <li><a href="#" aria-current="page">Arma Tu PC</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="./ayuda.html">Ayuda</a></li>
       </ul>
     </nav>
+
+    <!-- Carrito con contador -->
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
+      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
+      <span id="contador-carrito" class="contador">0</span>
+    </a>
   </header>
 
   <!-- Contenido principal -->
   <main>
     <section class="iconos-armado">
-      <a href="#Procesadores"><img src="iconos/procesador.png" alt="Procesador"></a>
-      <img src="../iconos/Motherboard" alt="Motherboard">
-      <img src="iconos/cooler.png" alt="Cooler">
-      <img src="iconos/ram.png" alt="Memoria RAM">
-      <img src="iconos/placa.png" alt="Placa de video">
-      <img src="iconos/disco.png" alt="Disco rígido o SSD">
-      <img src="iconos/gabinete.png" alt="Gabinete">
-      <img src="iconos/mouse.png" alt="Mouse">
+      <a href="#Procesadores"><img src="../iconos/procesador.png" alt="Procesador"></a>
+      <img src="../iconos/motherboard.png" alt="Motherboard">
+      <img src="../iconos/cooler.png" alt="Cooler">
+      <img src="../iconos/ram.png" alt="Memoria RAM">
+      <img src="../iconos/placa.png" alt="Placa de video">
+      <img src="../iconos/disco.png" alt="Disco rígido o SSD">
+      <img src="../iconos/gabinete.png" alt="Gabinete">
+      <img src="../iconos/mouse.png" alt="Mouse">
     </section>
 
     <section class="buscador-armado">
       <input type="text" placeholder="Buscar componente...">
-      <img src="iconos/amd.png" alt="AMD Logo" height="40">
+      <img src="../iconos/amd.png" alt="AMD Logo" height="40">
     </section>
 
     <section class="productos-pc">
       <div class="fila">
-        <div class="producto"><img src="imagenes/1.png" alt="Componente 1"></div>
-        <div class="producto"><img src="imagenes/2.png" alt="Componente 2"></div>
-        <div class="producto"><img src="imagenes/3.png" alt="Componente 3"></div>
-        <div class="producto"><img src="imagenes/4.png" alt="Componente 4"></div>
-        <div class="producto"><img src="imagenes/5.png" alt="Componente 5"></div>
+        <div class="producto"><img src="../imagenes/1.png" alt="Componente 1"></div>
+        <div class="producto"><img src="../imagenes/2.png" alt="Componente 2"></div>
+        <div class="producto"><img src="../imagenes/3.png" alt="Componente 3"></div>
+        <div class="producto"><img src="../imagenes/4.png" alt="Componente 4"></div>
+        <div class="producto"><img src="../imagenes/5.png" alt="Componente 5"></div>
       </div>
       <div class="fila">
-        <div class="producto"><img src="imagenes/6.png" alt="Componente 6"></div>
-        <div class="producto"><img src="imagenes/7.png" alt="Componente 7"></div>
-        <div class="producto"><img src="imagenes/8.png" alt="Componente 8"></div>
-        <div class="producto"><img src="imagenes/9.png" alt="Componente 9"></div>
-        <div class="producto"><img src="imagenes/10.png" alt="Componente 10"></div>
+        <div class="producto"><img src="../imagenes/6.png" alt="Componente 6"></div>
+        <div class="producto"><img src="../imagenes/7.png" alt="Componente 7"></div>
+        <div class="producto"><img src="../imagenes/8.png" alt="Componente 8"></div>
+        <div class="producto"><img src="../imagenes/9.png" alt="Componente 9"></div>
+        <div class="producto"><img src="../imagenes/10.png" alt="Componente 10"></div>
       </div>
     </section>
   </main>
@@ -70,21 +70,21 @@
   <!-- Footer -->
   <footer id="footer">
     <article class="redes">
-      <h5>SEGUINOS</h5>
-      <a href="#"><img src="iconos/logofacebook.png" alt="Facebook"></a>
-      <a href="#"><img src="iconos/logoinstagram.png" alt="Instagram"></a>
+      <h4>Seguinos</h4>
+      <a href="#"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook"></a>
+      <a href="#"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram"></a>
     </article>
     <article class="wsp">
-      <h5>COMUNICATE CON NOSOTROS</h5>
-      <img src="iconos/logowhatsapp.webp" alt="WhatsApp">
+      <h4>Comunicate con Nosotros</h4>
+      <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp">
     </article>
     <article class="boton">
-      <button onclick="location.href='ayuda.html'">AYUDA</button>
-      <button type="button">TÉRMINOS Y CONDICIONES</button>
+      <button onclick="location.href='ayuda.html'">Ayuda</button>
+      <button type="button">Términos y Condiciones</button>
     </article>
     <article class="logo">
-      <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo">
-      <h5>Punto LAN - Derechos Reservados</h5>
+      <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN">
+      <p>Punto LAN - Derechos Reservados</p>
     </article>
   </footer>
 

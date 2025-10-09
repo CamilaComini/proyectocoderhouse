@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Camila Comini">
+  <meta name="description" content="Centro de ayuda de Punto LAN: preguntas frecuentes, contacto y soporte personalizado.">
   <title>Ayuda - Punto LAN</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -12,23 +13,23 @@
 
   <!-- Header -->
   <header id="header">
-    <a href="carrito.html">
-      <img src="imagenes/carrito.png" alt="Carrito" class="carrito">
-    </a>
-    <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN">
-  </header>
+    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
 
-  <!-- Navegación -->
-  <header id="head">
-    <nav id="nav">
+    <nav id="nav" aria-label="Navegación principal">
       <ul class="ul">
         <li><a href="../index.html">Inicio</a></li>
-        <li><a href="productos.html">Productos</a></li>
-        <li><a href="armatupc.html">Arma Tu PC</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li><a href="ayuda.html" class="activo">Ayuda</a></li>
+        <li><a href="./productos.html">Productos</a></li>
+        <li><a href="./armatupc.html">Arma Tu PC</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="#" class="activo" >Ayuda</a></li>
       </ul>
     </nav>
+
+    <!-- Carrito con contador -->
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
+      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
+      <span id="contador-carrito" class="contador">0</span>
+    </a>
   </header>
 
   <!-- Contenido principal -->
@@ -37,90 +38,88 @@
       <h2>¿NECESITÁS AYUDA?</h2>
       <p>En Punto LAN estamos para asistirte. A continuación, podés consultar nuestras preguntas frecuentes o escribirnos directamente.</p>
 
+      <!-- FAQ -->
       <article class="faq">
         <h3>PREGUNTAS FRECUENTES</h3>
-
         <details>
-          <summary>¿CÓMO REALIZAR UN PEDIDO?</summary>
+          <summary>¿Cómo realizar un pedido?</summary>
           <p>Podés realizar un pedido agregando productos al carrito y completando el formulario de compra.</p>
         </details>
-
         <details>
-          <summary>¿QUÉ FORMAS DE PAGO TENEMOS?</summary>
-          <p>Aceptamos efectivo, transferencia bancaria, MercadoPago, tarjetas de crédito y débito.</p>
+          <summary>¿Qué formas de pago aceptamos?</summary>
+          <p>Efectivo, transferencia bancaria, MercadoPago, tarjetas de crédito y débito.</p>
         </details>
-
         <details>
-          <summary>¿LOS PRODUCTOS TIENEN GARANTÍA?</summary>
-          <p>Sí, todos nuestros productos cuentan con garantía oficial del fabricante o distribuidor.</p>
+          <summary>¿Los productos tienen garantía?</summary>
+          <p>Sí, todos cuentan con garantía oficial del fabricante o distribuidor.</p>
         </details>
-
         <details>
-          <summary>¿REALIZAN ENVÍOS?</summary>
+          <summary>¿Realizan envíos?</summary>
           <p>Hacemos envíos a todo el país a través de correo y logística propia.</p>
         </details>
-
         <details>
-          <summary>¿PUEDO RETIRAR EN LOCAL?</summary>
+          <summary>¿Puedo retirar en local?</summary>
           <p>Sí, tenemos punto de entrega en Funes y Rosario previa coordinación.</p>
         </details>
       </article>
 
+      <!-- Contacto -->
       <article class="contacto">
         <h3>CONTACTO</h3>
         <p>Podés comunicarte con nosotros por WhatsApp, Instagram o completar el formulario en esta sección.</p>
       </article>
 
+      <!-- Soporte -->
       <article class="soporte">
         <h3>SOPORTE PERSONALIZADO</h3>
-        <p>También ofrecemos soporte para ayudarte a elegir tu producto, armar tu PC o resolver cualquier inconveniente con tu compra.</p>
+        <p>Ofrecemos soporte para ayudarte a elegir tu producto, armar tu PC o resolver cualquier inconveniente con tu compra.</p>
       </article>
 
-      <form>
-        <div class="form-container">
-          <div class="form-left">
-            <label for="mensaje">ENVIANOS TU CONSULTA</label>
-            <textarea id="mensaje" rows="5" required></textarea>
+      <!-- Formulario -->
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Envíanos tu consulta</legend>
+          <div class="form-container">
+            <div class="form-left">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta aquí..." required></textarea>
+            </div>
+            <div class="form-right">
+              <label for="nombre">Nombre y Apellido:</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="ejemplo@mail.com" required>
+
+              <label for="telefono">Teléfono:</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: +54 9 341 1234567" required>
+
+              <br><br>
+              <input type="submit" value="Enviar">
+            </div>
           </div>
-          <div class="form-right">
-            <label for="nombre">NOMBRE Y APELLIDO:</label>
-            <input type="text" id="nombre" required>
-
-            <label for="email">EMAIL:</label>
-            <input type="email" id="email" required>
-
-            <label for="telefono">TELÉFONO:</label>
-            <input type="tel" id="telefono" required>
-
-            <br><br>
-            <input type="submit" value="ENVIAR">
-          </div>
-        </div>
+        </fieldset>
       </form>
     </section>
   </main>
   
-  <!-- Footer -->
   <footer id="footer">
     <article class="redes">
-      <h5>SEGUINOS</h5>
-      <a href="#"><img src="iconos/logoinstagram.png" alt="Instagram"></a>
-      <a href="#"><img src="iconos/logofacebook.png" alt="Facebook"></a>
+      <h4>Seguinos</h4>
+      <a href="#" aria-label="Facebook"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook" /></a>
+      <a href="#" aria-label="Instagram"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram" /></a>
     </article>
-
     <article class="wsp">
-      <h5>COMUNICATE CON NOSOTROS</h5>
-      <img src="iconos/logowhatsapp.webp" alt="WhatsApp">
+      <h4>Comunicate con Nosotros</h4>
+      <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp" />
     </article>
-
     <article class="boton">
-      <button onclick="location.href='ayuda.html'">AYUDA</button>
-      <button type="button">TÉRMINOS Y CONDICIONES</button>
+      <button onclick="location.href='#'">Ayuda</button>
+      <button type="button">Términos y Condiciones</button>
     </article>
-
     <article class="logo">
-      <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo">
-      <h5>Punto LAN - Derechos Reservados</h5>
+      <img src="imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
+      <p>Punto LAN - Derechos Reservados</p>
     </article>
   </footer>
 

@@ -4,32 +4,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/style.css"/>
   <title>Productos - Punto LAN</title>
 </head>
 <body id="body">
 
-  <!-- Header con logo y carrito -->
+  <!-- Header -->
   <header id="header">
-    <a href="carrito.html" aria-label="Ir al carrito de compras">
-      <img src="../imagenes/carrito.png" alt="Carrito" class="carrito" />
+    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
+
+    <nav id="nav" aria-label="Navegación principal">
+      <ul class="ul">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="./productos.html" aria-current="page">Productos</a></li>
+        <li><a href="./armatupc.html">Arma Tu PC</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="./ayuda.html">Ayuda</a></li>
+      </ul>
+    </nav>
+
+    <!-- Carrito con contador -->
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
+      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
+      <span id="contador-carrito" class="contador">0</span>
     </a>
-    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
   </header>
 
-  <!-- Menú de navegación principal -->
-  <nav id="nav">
-    <ul class="ul">
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="productos.html" aria-current="page">Productos</a></li>
-      <li><a href="armatupc.html">Arma Tu PC</a></li>
-      <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="ayuda.html">Ayuda</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <!-- Menú lateral con anclas a secciones -->
+    <!-- Menú lateral -->
     <aside class="menu-lateral" aria-label="Categorías de productos">
       <ul>
         <li><a href="#procesadores">Procesadores</a></li>
@@ -39,19 +41,45 @@
       </ul>
     </aside>
 
-    <input type="search" placeholder="Buscar producto" aria-label="Buscar producto" />
+    <!-- Barra de búsqueda -->
+    <section class="busqueda">
+      <input type="search" placeholder="Buscar producto" aria-label="Buscar producto" />
+    </section>
 
-    <!-- Sección principal con productos -->
+    <!-- Galería de productos -->
     <section class="productos" aria-label="Galería de productos">
-      
-      <!-- Galería de productos -->
       <div class="galeria">
-        <div class="producto" tabindex="0"><img src="../imagenes/1.png" alt="Producto 1" /></div>
-        <div class="producto" tabindex="0"><img src="../imagenes/2.png" alt="Producto 2" /></div>
-        <div class="producto" tabindex="0"><img src="../imagenes/3.png" alt="Producto 3" /></div>
-        <div class="producto" tabindex="0"><img src="../imagenes/4.png" alt="Producto 4" /></div>
-        <div class="producto" tabindex="0"><img src="../imagenes/5.png" alt="Producto 5" /></div>
-        <div class="producto" tabindex="0"><img src="../imagenes/6.png" alt="Producto 6" /></div>
+      
+        <figure class="producto" tabindex="0">
+          <img src="../imagenes/1.png" alt="Procesador Ryzen 5" />
+          <figcaption>Procesador Ryzen 5 - $150.000</figcaption>
+          <button class="btn-agregar" data-id="1">Agregar al carrito</button>
+        </figure>
+
+        <figure class="producto" tabindex="0">
+          <img src="../imagenes/2.png" alt="Mother ASUS B450" />
+          <figcaption>Mother ASUS B450 - $120.000</figcaption>
+          <button class="btn-agregar" data-id="2">Agregar al carrito</button>
+        </figure>
+
+        <figure class="producto" tabindex="0">
+          <img src="../imagenes/3.png" alt="Placa de Video RTX 3060" />
+          <figcaption>Placa de Video RTX 3060 - $380.000</figcaption>
+          <button class="btn-agregar" data-id="3">Agregar al carrito</button>
+        </figure>
+ 
+        <figure class="producto" tabindex="0">
+          <img src="../imagenes/12.png" alt="Auriculares Gamer" />
+          <figcaption>Procesador Ryzen 5 - $200.000</figcaption>
+          <button class="btn-agregar" data-id="1">Agregar al carrito</button>
+        </figure>
+
+        <figure class="producto" tabindex="0">
+          <img src="../imagenes/23.png" alt="Gabinete Gamer" />
+          <figcaption>Procesador Ryzen 5 - $80.000</figcaption>
+          <button class="btn-agregar" data-id="1">Agregar al carrito</button>
+        </figure>
+
       </div>
     </section>
   </main>
@@ -60,13 +88,15 @@
   <footer id="footer">
     <article class="redes">
       <h4>SEGUINOS</h4>
-      <a href="#"><img src="../iconos/logofacebook.png" alt="Facebook" /></a>
-      <a href="#"><img src="../iconos/logoinstagram.png" alt="Instagram" /></a>
+      <a href="#" aria-label="Facebook Punto LAN"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook" /></a>
+      <a href="#" aria-label="Instagram Punto LAN"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram" /></a>
     </article>
 
     <article class="wsp">
       <h4>COMUNICATE CON NOSOTROS</h4>
-      <img src="../iconos/logowhatsapp.webp" alt="WhatsApp" />
+      <a href="https://wa.me/5491111111111" aria-label="Contactar por WhatsApp">
+        <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp" />
+      </a>
     </article>
 
     <article class="boton">
@@ -80,5 +110,7 @@
     </article>
   </footer>
 
+  <!-- Script de productos -->
+  <script src="../js/productos.js"></script>
 </body>
 </html>
