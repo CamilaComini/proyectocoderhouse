@@ -1,6 +1,6 @@
 @use 'variables'; 
 
-/* 🧭 HEADER */
+/*  HEADER */
 header {
   background-color: variables.$color-negro;
   display: flex;
@@ -22,7 +22,7 @@ header {
   }
 }
 
-/* 🧭 NAV */
+/*  NAV */
 nav {
   background-color: variables.$color-negro;
   padding: 0.6rem;
@@ -51,7 +51,7 @@ nav {
   }
 }
 
-/* 🛒 Carrito */
+/*  Carrito */
 .carrito {
   width: 40px;
   height: 40px;

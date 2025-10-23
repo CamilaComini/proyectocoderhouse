@@ -4,6 +4,9 @@
 @use 'header';
 @use 'inicio';
 @use 'producto';
+@use 'animations';
+@use 'mediaqueries';
+@use 'mixins';
 
 body {
   font-family: variables.$fuente-principal;
