@@ -1,0 +1,83 @@
+@use 'variables'; 
+
+/* 🎮 Sección de jugadas*/
+.jugadas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem;
+  background-color: variables.$color-blanco;
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Título principal */
+.titulo-video {
+  font-size: 2rem;
+  color: variables.$color-negro;
+  font-family: variables.$fuente-principal;
+  margin-bottom: 3rem;
+}
+
+/* Contenedor principal (video + texto) */
+.jugadas-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor del video */
+.video-container {
+  flex: 1 1 70%;
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    width: 100%;
+    max-width: 1000px;
+    height: 560px;
+    border-radius: 20px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+/* Texto al costado derecho */
+.texto-video {
+  flex: 1 1 25%;
+  max-width: 400px;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+  font-family: variables.$fuente-principal;
+  line-height: 1.6;
+}
+
+/* 📱 Responsivo */
+@media (max-width: 900px) {
+  .jugadas-contenido {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-video {
+    max-width: 90%;
+    margin-top: 2rem;
+  }
+
+  .video-container iframe {
+    max-width: 95%;
+    height: 360px;
+  }
+}

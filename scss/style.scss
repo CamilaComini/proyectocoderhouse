@@ -1,0 +1,10 @@
+// style.scss
+@use 'variables';
+@use 'global';
+@use 'header';
+@use 'inicio';
+@use 'producto';
+
+body {
+  font-family: variables.$fuente-principal;
+}
