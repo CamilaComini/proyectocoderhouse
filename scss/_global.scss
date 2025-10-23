@@ -1,6 +1,6 @@
 @use 'variables';
 
-/* RESETEO Y ESTILOS GENERALES */
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ body {
 
 /* Tipografía */
 h1, h2, h3, h4 {
-  font-family: variables.$fuente-titulos; 
+  font-family: variables.$fuente-titulos;
   text-transform: uppercase;
   letter-spacing: 1px;
 }

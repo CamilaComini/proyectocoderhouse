@@ -2,8 +2,8 @@
 
 /* FOOTER */
 footer {
-  background-color: variables.$color-rojo; // Fondo rojo
-  border-top: 3px solid variables.$color-negro; // Línea superior negra
+  background-color: variables.$color-rojo;
+  border-top: 3px solid variables.$color-negro;
   color: variables.$color-blanco;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -17,11 +17,6 @@ footer {
     text-transform: uppercase;
   }
 
-  p {
-    margin-top: 0.5rem;
-    font-size: 0.9rem;
-  }
-
   img {
     width: 30px;
     transition: transform 0.3s ease;
@@ -29,5 +24,10 @@ footer {
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
   }
 }

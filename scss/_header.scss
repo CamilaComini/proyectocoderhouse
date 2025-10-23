@@ -1,6 +1,6 @@
-@use 'variables'; 
+@use 'variables';
 
-/*  HEADER */
+/* HEADER */
 header {
   background-color: variables.$color-negro;
   display: flex;
@@ -22,7 +22,7 @@ header {
   }
 }
 
-/*  NAV */
+/* NAV */
 nav {
   background-color: variables.$color-negro;
   padding: 0.6rem;
@@ -51,9 +51,10 @@ nav {
   }
 }
 
-/*  Carrito */
 .carrito {
   width: 40px;
   height: 40px;
+  cursor: pointer;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  z-index: 1001;
 }

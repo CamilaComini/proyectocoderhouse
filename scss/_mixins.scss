@@ -1,13 +1,15 @@
+@use 'variables' as v;
+
+/* Centrado flexible */
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin responsive($breakpoint) {
-  @if $breakpoint == mobile {
-    @media (max-width: 768px) { @content; }
-  } @else if $breakpoint == desktop {
-    @media (min-width: 1024px) { @content; }
+/* Mediaqueries reutilizables */
+@mixin respond-to($device) {
+  @media (max-width: map-get(v.$breakpoints, $device)) {
+    @content;
   }
 }
