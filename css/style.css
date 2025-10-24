@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* VARIABLES GENERALES */
-/* RESETEO Y ESTILOS GENERALES */
+/* Breakpoints centralizados */
+/* Reset general */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +35,7 @@ h1, h2, h3, h4 {
   border-radius: 5px;
 }
 
-/*  HEADER */
+/* HEADER */
 header {
   background-color: #000;
   display: flex;
@@ -54,7 +55,7 @@ header img:hover {
   transform: scale(1.1);
 }
 
-/*  NAV */
+/* NAV */
 nav {
   background-color: #000;
   padding: 0.6rem;
@@ -79,11 +80,12 @@ nav a:hover, nav a:focus-visible {
   border-radius: 5px;
 }
 
-/*  Carrito */
 .carrito {
   width: 40px;
   height: 40px;
+  cursor: pointer;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  z-index: 1001;
 }
 
 /* Sección de jugadas */
@@ -91,63 +93,74 @@ nav a:hover, nav a:focus-visible {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   background-color: #fff;
   text-align: center;
   margin-top: 100px;
 }
-
-/*  Título principal */
-.titulo-video {
-  font-size: 2rem;
+.jugadas .titulo-video {
+  font-size: 2.5rem;
   color: #000;
   font-family: "Poppins", sans-serif;
   margin-bottom: 3rem;
 }
-
-/* Contenedor principal (video + texto) */
-.jugadas-contenido {
+.jugadas .jugadas-contenido {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   width: 100%;
   max-width: 1300px;
-  flex-wrap: wrap;
 }
-
-/*  Contenedor del video */
-.video-container {
-  flex: 1 1 70%;
+.jugadas .jugadas-contenido .video-container {
+  flex: 1 1 650px;
   display: flex;
   justify-content: center;
 }
-.video-container iframe {
+.jugadas .jugadas-contenido .video-container iframe {
   width: 100%;
-  max-width: 1000px;
-  height: 560px;
+  max-width: 850px;
+  height: 480px;
   border-radius: 20px;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.video-container iframe:hover {
+.jugadas .jugadas-contenido .video-container iframe:hover {
   transform: scale(1.02);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
-
-/*  Texto al costado derecho */
-.texto-video {
-  flex: 1 1 25%;
-  max-width: 400px;
-  text-align: left;
-  font-size: 1.1rem;
-  color: #333;
+.jugadas .jugadas-contenido .texto-derecha {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
+  color: #000;
+}
+.jugadas .jugadas-contenido .texto-abajo {
+  flex-basis: 100%;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  font-family: "Poppins", sans-serif;
+  color: #000;
 }
 
-/*  PRODUCTOS */
+.productos {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.marcas {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* PRODUCTOS */
 .productos {
   text-align: center;
   padding: 2rem 1rem;
@@ -212,6 +225,21 @@ button:hover, button:focus-visible {
   transform: translateY(-2px);
 }
 
+.arma-tu-pc .iconos-armado {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.arma-tu-pc .iconos-armado img {
+  max-width: 150px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Fade in */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -224,7 +252,24 @@ button:hover, button:focus-visible {
   animation: fadeIn 1s ease-in-out;
 }
 
-/*  Responsividad del video y texto */
+/* Slide up */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.slide-up {
+  animation: slideUp 0.8s ease-in-out;
+}
+
+/* Centrado flexible */
+/* Mediaqueries reutilizables */
+/* Responsividad del video y texto usando mixins */
 @media (max-width: 1024px) {
   .jugadas-contenido {
     flex-direction: column;
@@ -232,45 +277,240 @@ button:hover, button:focus-visible {
     text-align: center;
     gap: 2rem;
   }
-  .video-container iframe {
-    width: 90%;
-    height: 420px;
-  }
-  .texto-video {
-    max-width: 90%;
-    margin-top: 1.5rem;
-  }
 }
-/*  Tablets y pantallas medianas */
 @media (max-width: 768px) {
   .jugadas-contenido {
     flex-direction: column;
   }
+}
+
+@media (max-width: 1024px) {
+  .video-container iframe {
+    width: 90%;
+    height: 420px;
+  }
+}
+@media (max-width: 768px) {
   .video-container iframe {
     width: 95%;
     height: 360px;
   }
-  .texto-video {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
 }
-/*  Celulares */
 @media (max-width: 480px) {
   .video-container iframe {
     width: 100%;
     height: 280px;
   }
-  .titulo-video {
-    font-size: 1.4rem;
+}
+
+@media (max-width: 1024px) {
+  .texto-video {
+    max-width: 90%;
+    margin-top: 1.5rem;
   }
+}
+@media (max-width: 768px) {
+  .texto-video {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 480px) {
   .texto-video {
     max-width: 95%;
     font-size: 0.95rem;
   }
 }
-body {
+
+@media (max-width: 480px) {
+  .titulo-video {
+    font-size: 1.4rem;
+  }
+}
+
+.nosotros-container {
   font-family: "Poppins", sans-serif;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  border-left: 4px solid #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.nosotros-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.nosotros-container p, .nosotros-container h2, .nosotros-container h3 {
+  margin: 1.5rem 0;
+}
+.nosotros-container .equipo h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.nosotros-container .equipo .miembro {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.frases {
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+.frases h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.frases p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.frases .faq, .frases .contacto, .frases .soporte, .frases form {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: left;
+  padding: 1.5rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: "Poppins", sans-serif;
+}
+.frases .faq h3, .frases .contacto h3, .frases .soporte h3, .frases form h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.frases .faq details, .frases .contacto details, .frases .soporte details, .frases form details {
+  margin-bottom: 1rem;
+}
+.frases .faq details summary, .frases .contacto details summary, .frases .soporte details summary, .frases form details summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+.frases .faq details p, .frases .contacto details p, .frases .soporte details p, .frases form details p {
+  margin-top: 0.5rem;
+}
+.frases .faq input, .frases .faq textarea, .frases .contacto input, .frases .contacto textarea, .frases .soporte input, .frases .soporte textarea, .frases form input, .frases form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #000;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.frases .faq input[type=submit], .frases .faq button, .frases .contacto input[type=submit], .frases .contacto button, .frases .soporte input[type=submit], .frases .soporte button, .frases form input[type=submit], .frases form button {
+  display: block;
+  width: 100%;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.frases .faq input[type=submit]:hover, .frases .faq button:hover, .frases .contacto input[type=submit]:hover, .frases .contacto button:hover, .frases .soporte input[type=submit]:hover, .frases .soporte button:hover, .frases form input[type=submit]:hover, .frases form button:hover {
+  background-color: #ff1a1a;
+}
+
+/* FOOTER */
+footer {
+  background-color: #ff4d4d;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 3rem;
+  gap: 1.5rem;
+  border-top: 3px solid #000;
+  /* SECCIÓN REDES  */
+}
+footer .redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+footer .redes h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+}
+footer .redes a {
+  margin-right: 0.8rem;
+}
+footer .redes a img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+footer .redes a img:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 5px #fff);
+}
+footer {
+  /*  SECCIÓN CONTACTO  */
+}
+footer .wsp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+footer .wsp h4 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+}
+footer .wsp img {
+  width: 40px;
+  height: 40px;
+}
+footer {
+  /* BOTONES */
+}
+footer .boton {
+  display: flex;
+  gap: 1rem;
+}
+footer .boton button {
+  background: linear-gradient(135deg, #000, #333);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+footer .boton button:hover, footer .boton button:focus-visible {
+  background: linear-gradient(135deg, #111, #444);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+footer {
+  /*  LOGO  */
+}
+footer .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .logo img {
+  width: 60px;
+  height: 60px;
+}
+footer .logo p {
+  font-size: 0.85rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

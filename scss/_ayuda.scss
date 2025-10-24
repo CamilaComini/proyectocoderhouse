@@ -1,0 +1,75 @@
+@use 'variables' as v;
+
+.frases {
+  max-width: 900px; // limita el ancho total
+  margin: 3rem auto; // centra todo horizontalmente
+  text-align: center;
+  font-family: v.$fuente-principal;
+
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .faq, .contacto, .soporte, form {
+    max-width: 600px; // ancho de los cuadros
+    margin: 2rem auto; // centrado horizontal
+    text-align: left; // texto dentro de cuadros alineado a la izquierda
+    padding: 1.5rem;
+    background-color: v.$color-blanco;
+    border: 2px solid v.$color-negro;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    font-family: v.$fuente-principal;
+
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    details {
+      margin-bottom: 1rem;
+
+      summary {
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      p {
+        margin-top: 0.5rem;
+      }
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid v.$color-negro;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    input[type="submit"], button {
+      display: block;
+      width: 100%;
+      background-color: v.$color-rojo;
+      color: v.$color-blanco;
+      border: none;
+      padding: 0.8rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: darken(v.$color-rojo, 10%);
+      }
+    }
+  }
+}

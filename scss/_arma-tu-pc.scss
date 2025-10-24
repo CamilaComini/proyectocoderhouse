@@ -1,0 +1,16 @@
+.arma-tu-pc {
+  .iconos-armado {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    img {
+      max-width: 150px; 
+      height: auto;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use "sass:map";
 
 /* Centrado flexible */
 @mixin flex-center {
@@ -9,7 +10,7 @@
 
 /* Mediaqueries reutilizables */
 @mixin respond-to($device) {
-  @media (max-width: map-get(v.$breakpoints, $device)) {
+  @media (max-width: map.get(v.$breakpoints, $device)) {
     @content;
   }
 }
