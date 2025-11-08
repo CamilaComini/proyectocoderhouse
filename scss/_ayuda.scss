@@ -1,8 +1,8 @@
 @use 'variables' as v;
 
 .frases {
-  max-width: 900px; // limita el ancho total
-  margin: 3rem auto; // centra todo horizontalmente
+  max-width: 900px; 
+  margin: 3rem auto; 
   text-align: center;
   font-family: v.$fuente-principal;
 
@@ -16,11 +16,10 @@
     font-size: 1.1rem;
     line-height: 1.6;
   }
-
-  .faq, .contacto, .soporte, form {
-    max-width: 600px; // ancho de los cuadros
-    margin: 2rem auto; // centrado horizontal
-    text-align: left; // texto dentro de cuadros alineado a la izquierda
+ form {
+    max-width: 1000px; 
+    margin: 2rem auto; 
+    text-align: left;
     padding: 1.5rem;
     background-color: v.$color-blanco;
     border: 2px solid v.$color-negro;

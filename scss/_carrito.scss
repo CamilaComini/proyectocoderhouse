@@ -1,0 +1,76 @@
+@use 'variables' as v;
+
+.carrito-container {
+  max-width: 900px;
+  margin: 6rem auto 4rem auto;
+  padding: 2rem;
+  background-color: v.$color-blanco;
+  border: 2px solid v.$color-negro;
+  border-radius: 1rem;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: v.$fuente-principal;
+
+.h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem 0;
+    color: v.$color-negro;
+    font-weight: 700;
+  }
+
+/* ITEMS DEL CARRITO */
+.carrito-items {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-top: 2px solid v.$color-negro;
+  border-bottom: 2px solid v.$color-negro;
+
+  p {
+    font-size: 1.1rem;
+    margin: 1rem 0;
+  }
+}
+
+/* TOTAL */
+.carrito-total {
+  margin: 2rem 0;
+
+  h3 {
+    font-size: 1.5rem;
+    color: v.$color-negro;
+  }
+}
+
+/* BOTONES */
+.carrito-botones {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2.5rem;
+
+  button {
+    background-color: v.$color-negro;
+    color: v.$color-blanco;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    margin: 6rem auto 4rem auto;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      background-color: #222;
+    }
+  }
+
+  .btn-finalizar {
+    background-color: v.$color-rojo;
+
+    &:hover {
+      background-color: darken(v.$color-rojo, 10%);
+    }
+  }
+}
+}

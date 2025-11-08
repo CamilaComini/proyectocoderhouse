@@ -1,33 +1,37 @@
 @use 'variables';
 
 /* FOOTER */
-footer {
+footer.footer {
   background-color: variables.$color-rojo;
   color: variables.$color-blanco;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 2.5rem 3rem;
   gap: 1.5rem;
   border-top: 3px solid variables.$color-negro;
+  width: 100%;
+  position: static;
 
-  /* SECCIÓN REDES  */
+  /* SECCIÓN REDES */
   .redes {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.7rem;
 
-    h4 {
+    h1, h3, h4 {
       font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       color: variables.$color-blanco;
+      margin: 0;
     }
 
     a {
       margin-right: 0.8rem;
+
       img {
         width: 35px;
         height: 35px;
@@ -41,17 +45,26 @@ footer {
     }
   }
 
-  /*  SECCIÓN CONTACTO  */
+  /* SECCIÓN CONTACTO */
   .wsp {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
 
-    h4 {
+    h1, h4 {
       text-transform: uppercase;
       font-size: 1rem;
       color: variables.$color-blanco;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: variables.$color-blanco;
+      margin: 0;
     }
 
     img {
@@ -85,7 +98,7 @@ footer {
     }
   }
 
-  /*  LOGO  */
+  /* LOGO */
   .logo {
     display: flex;
     flex-direction: column;
@@ -100,6 +113,7 @@ footer {
     p {
       font-size: 0.85rem;
       color: variables.$color-blanco;
+      margin: 0;
     }
   }
- }
+}

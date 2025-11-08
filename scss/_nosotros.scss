@@ -1,32 +1,104 @@
-@use 'variables';
+@use 'variables' as v;
 
+/*  NOSOTROS  */
 .nosotros-container {
-  font-family: variables.$fuente-principal;
-  max-width: 800px;        
-  margin: 3rem auto;       
-  padding: 2rem 3rem;      
-  border-left: 4px solid variables.$color-negro; 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);      
+  width: 100%;
+  padding: 3rem 2rem;
+  font-family: v.$fuente-principal;
+  background-color: v.$color-blanco;
+  text-align: center;
 
+  /* TÍTULO PRINCIPAL */
   h1 {
-    text-align: center;
+    font-size: 3rem;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-weight: bold;
+    color: v.$color-negro;
   }
 
-  p, h2, h3 {
-    margin: 1.5rem 0;
+  /* TEXTO */
+  p {
+    max-width: 100%;
+    margin: 1rem auto 2rem;
+    line-height: 1.7;
+    font-size: 1.5rem;
   }
 
-  .equipo {
-    h2 {
-      text-align: center;
-      margin-bottom: 1rem;
+ /*   GALERÍA */
+  .galeria-nosotros {
+    columns: 5;                
+    column-gap: 1.5rem;        
+    width: 100%;
+    margin: 3rem auto;
+
+    img {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      border-radius: 14px;
+      display: block;
+      break-inside: avoid;     
+      box-shadow: 0 5px 25px rgba(0,0,0,0.18);
+      transition: transform .3s ease, box-shadow .3s ease;
+
+      &:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      }
+    }
+  }
+}
+/* EQUIPO */
+.equipo {
+  margin: 4rem auto;
+  max-width: 1200px;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  /* CONTENEDOR DE LAS DOS TARJETAS */
+  .miembros {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: nowrap;   
+  }
+
+  /* TARJETA INDIVIDUAL */
+  .miembro {
+    background-color: #fff;
+    width: 100%;           
+    min-width: 500px;      
+    border-radius: 18px;
+    padding: 2rem 1.5rem;
+    border: 2px solid #000;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 32px rgba(0,0,0,0.25);
     }
 
-    .miembro {
-      margin-bottom: 2rem;
-      text-align: left; 
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.5;
+      max-width: 85%;
     }
   }
 }

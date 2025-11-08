@@ -4,17 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Armá tu PC en Punto LAN con componentes de calidad. Configurá tu equipo a medida y descubrí las mejores opciones para rendimiento, gaming y trabajo.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <meta name="author" content="Camila Comini">
   <title>Arma tu PC - Punto LAN</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body id="body">
+
+<body class="body">
 
   <!-- Header -->
-  <header id="header">
-    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
+  <header class="header">
+    <img src="../iconos/logopuntolan-DnwV6pvN.ico" alt="Logo de la empresa Punto LAN" class="logo-header" />
 
-    <nav id="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal">
       <ul class="ul">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="./productos.html">Productos</a></li>
@@ -25,9 +28,9 @@
     </nav>
 
     <!-- Carrito con contador -->
-    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
-      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
-      <span id="contador-carrito" class="contador">0</span>
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-header">
+      <img src="../iconos/cart_106649.ico" alt="Carrito de compras" class="carrito" />
+      <span class="contador-carrito" class="contador">0</span>
     </a>
   </header>
 
@@ -44,48 +47,70 @@
     </section>
 
     <section class="buscador-armado">
-      <input type="text" placeholder="Buscar componente...">
-      <img src="../iconos/amd.png" alt="AMD Logo" height="40">
+    <input type="text" placeholder="Busca un producto...">
+    <div class="logos-procesadores">
+    <img src="../iconos/Intel_logo_(2006-2020).svg.png" alt="Intel Logo">
+    <img src="../iconos/png-transparent-socket-f-central-processing-unit-opteron-advanced-micro-devices-multi-core-processor-bulldozer-miscellaneous-angle-text-thumbnail-removebg-preview.png" alt="AMD Logo">
+    </div>
     </section>
 
     <section class="productos-pc">
-      <div class="fila">
-        <div class="producto"><img src="../imagenes/1.png" alt="Componente 1"></div>
-        <div class="producto"><img src="../imagenes/2.png" alt="Componente 2"></div>
-        <div class="producto"><img src="../imagenes/3.png" alt="Componente 3"></div>
-        <div class="producto"><img src="../imagenes/4.png" alt="Componente 4"></div>
-        <div class="producto"><img src="../imagenes/5.png" alt="Componente 5"></div>
-      </div>
-      <div class="fila">
-        <div class="producto"><img src="../imagenes/6.png" alt="Componente 6"></div>
-        <div class="producto"><img src="../imagenes/7.png" alt="Componente 7"></div>
-        <div class="producto"><img src="../imagenes/8.png" alt="Componente 8"></div>
-        <div class="producto"><img src="../imagenes/9.png" alt="Componente 9"></div>
-        <div class="producto"><img src="../imagenes/10.png" alt="Componente 10"></div>
+     <div class="grid-componentes">
+        <div class="product"><img src="../imagenes/Componentes pc (1).png" alt="Componente 1"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (2).png" alt="Componente 2"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (3).png" alt="Componente 3"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (4).png" alt="Componente 4"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (5).png" alt="Componente 5"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (6).png" alt="Componente 6"></div>
+        <div class="product"><img src="../imagenes/Componentes pc (7).png" alt="Componente 7"></div>
+        <div class="product"><img src="../imagenes/Fuentes (1).png" alt="Componente 8"></div>
+        <div class="product"><img src="../imagenes/Fuentes (2).png" alt="Componente 9"></div>
+        <div class="product"><img src="../imagenes/Fuentes (3).png" alt="Componente 10"></div>
+        <div class="product"><img src="../imagenes/gabinete (1).png" alt="Componente 11"></div>
+        <div class="product"><img src="../imagenes/gabinete (2).png" alt="Componente 12"></div>
+        <div class="product"><img src="../imagenes/gabinete (3).png" alt="Componente 13"></div>
+        <div class="product"><img src="../imagenes/gabinete (4).png" alt="Componente 14"></div>
+        <div class="product"><img src="../imagenes/memoria hd (1).png" alt="Componente 15"></div>
+        <div class="product"><img src="../imagenes/memoria hd (2).png" alt="Componente 16"></div>
+        <div class="product"><img src="../imagenes/memoria hd (3).png" alt="Componente 17"></div>
+        <div class="product"><img src="../imagenes/memoria hd (4).png" alt="Componente 18"></div>
+        <div class="product"><img src="../imagenes/memorias ddr (1).png" alt="Componente 19"></div>
+        <div class="product"><img src="../imagenes/memorias ddr (2).png" alt="Componente 20"></div>
+        <div class="product"><img src="../imagenes/memorias ddr (3).png" alt="Componente 21"></div>
+        <div class="product"><img src="../imagenes/memorias ddr (4).png" alt="Componente 22"></div>
+        <div class="product"><img src="../imagenes/microprocesador.png" alt="Componente 23"></div>
+        <div class="product"><img src="../imagenes/Motheboards (1).png" alt="Componente 24"></div>
+        <div class="product"><img src="../imagenes/Motheboards (2).png" alt="Componente 25"></div>
+        <div class="product"><img src="../imagenes/Motheboards (3).png" alt="Componente 26"></div>
+        <div class="product"><img src="../imagenes/placa de video (1).png" alt="Componente 27"></div>
+        <div class="product"><img src="../imagenes/placa de video (2).png" alt="Componente 28"></div>
+        <div class="product"><img src="../imagenes/placa de video (3).png" alt="Componente 29"></div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer id="footer">
+  <footer class="footer">
     <article class="redes">
-      <h4>Seguinos</h4>
-      <a href="#"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook"></a>
-      <a href="#"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram"></a>
+      <h1>SEGUINOS</h1>
+      <a href="#" aria-label="Facebook Punto LAN"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Link Para Ir A Nuestro Facebook" /></a>
+      <a href="#" aria-label="Instagram Punto LAN"><img src="../iconos/3721672-instagram_108066.ico" alt="Link Para Ir A Nuestro Instagram" /></a>
     </article>
     <article class="wsp">
-      <h4>Comunicate con Nosotros</h4>
-      <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp">
+      <h1>COMUNICATE CON NOSOTROS</h1>
+      <a href="https://wa.me/5491111111111" aria-label="Contactar por WhatsApp">
+        <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="Link Para Comunicarte Con Nosotros En WhatsApp" />
+      </a>
     </article>
     <article class="boton">
-      <button onclick="location.href='ayuda.html'">Ayuda</button>
-      <button type="button">Términos y Condiciones</button>
+      <button onclick="location.href='ayuda.html'">AYUDA</button>
+      <button type="button">TÉRMINOS Y CONDICIONES</button>
     </article>
     <article class="logo">
-      <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN">
+      <img src="../iconos/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
       <p>Punto LAN - Derechos Reservados</p>
     </article>
   </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

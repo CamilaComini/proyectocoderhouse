@@ -1,18 +1,21 @@
+<!-- productos.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explorá el catálogo de productos de Punto LAN. Encontrá insumos, accesorios y tecnología para PC con las mejores opciones en calidad y rendimiento.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/style.css"/>
   <title>Productos - Punto LAN</title>
 </head>
-<body id="body">
 
+<body class="body">
   <!-- Header -->
-  <header id="header">
-    <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
+  <header class="header">
+    <img src="../iconos/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" class="logo-header" />
 
-    <nav id="nav" aria-label="Navegación principal">
+    <nav class="nav" aria-label="Navegación principal">
       <ul class="ul">
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="./productos.html" aria-current="page">Productos</a></li>
@@ -23,22 +26,13 @@
     </nav>
 
     <!-- Carrito con contador -->
-    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-container">
-      <img src="../iconos/cart_106649.ico" alt="Carrito" class="carrito" />
-      <span id="contador-carrito" class="contador">0</span>
+    <a href="carrito.html" aria-label="Ir al carrito de compras" class="carrito-header">
+      <img src="../iconos/cart_106649.ico" alt="Carrito de compras" class="carrito" />
+      <span class="contador-carrito" class="contador">0</span>
     </a>
   </header>
 
   <main>
-    <!-- Menú lateral -->
-    <aside class="menu-lateral" aria-label="Categorías de productos">
-      <ul>
-        <li><a href="#procesadores">Procesadores</a></li>
-        <li><a href="#mothers">Mothers</a></li>
-        <li><a href="#placasvideo">Placas de Video</a></li>
-        <li><a href="#perifericos">Periféricos</a></li>
-      </ul>
-    </aside>
 
     <!-- Barra de búsqueda -->
     <section class="busqueda">
@@ -48,51 +42,93 @@
     <!-- Galería de productos -->
     <section class="productos" aria-label="Galería de productos">
       <div class="galeria">
-
-        <figure class="producto" tabindex="0">
-          <img src="../imagenes/1.png" alt="Procesador Ryzen 5" />
-          <figcaption>Notebook Acer Nitro - $700.000</figcaption>
+        
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (1).png" alt="Monitor Asus Tuf De 27 Pulgadas Curvo" />
+          <p>Monitor Asus Tuf 27' 165Hz Curvo Fhd $700.000</p>
           <button class="btn-agregar" data-id="1">Agregar al carrito</button>
-        </figure>
+        </div>
 
-        <figure class="producto" tabindex="0">
-          <img src="../imagenes/2.png" alt="Mother ASUS B450" />
-          <figcaption>Monitor Asus Tuf 27' 165hz Curvo- $430.000</figcaption>
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Fuentes (1).png" alt="Fuente Aureox De 500 Watts Color Negro con Rojo" />
+          <p>Fuente Aureox 500W $200.000</p>
           <button class="btn-agregar" data-id="2">Agregar al carrito</button>
-        </figure>
+        </div>
 
-        <figure class="producto" tabindex="0">
-          <img src="../imagenes/31.png" alt="Placa de Video RTX 3060" />
-          <figcaption>DDR4 16gb Mushkin Redline- $80.000</figcaption>
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/gabinete (1).png" alt="Gabinete Gamer Syx EO50 Negro Con Cooler Multicolor" />
+          <p>Gabinete Gamer Syx EO50 $250.000</p>
           <button class="btn-agregar" data-id="3">Agregar al carrito</button>
-        </figure>
+        </div>
 
-        <figure class="producto" tabindex="0">
-          <img src="../imagenes/12.png" alt="Auriculares Gamer" />
-          <figcaption>Teclado Mecanico Logitech G-Pro Black - $280.000</figcaption>
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/microprocesador.png" alt="Microprocesador Amd Ryzen 5" />
+          <p>Microprocesador Amd Ryzen 5 $670.000</p>
           <button class="btn-agregar" data-id="4">Agregar al carrito</button>
-        </figure>
+        </div>
 
-        <figure class="producto" tabindex="0">
-          <img src="../imagenes/23.png" alt="Gabinete Gamer" />
-          <figcaption>HD SSD M.2 256gb Wave - $310.000</figcaption>
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/placa de video (2).png" alt="Placa De Video Vga Rtx 4060 Ventus Negra" />
+          <p>Placa De Video Vga Rtx 4060 Ventus 8gb Black $900.000</p>
           <button class="btn-agregar" data-id="5">Agregar al carrito</button>
-        </figure>
+        </div>
 
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (2).png" alt="Teclado Gamer Retroiluminado Netmak Zakro Blanco" />
+          <p>Teclado Gamer Retroiluminado Netmak Zakro $100.000</p>
+          <button class="btn-agregar" data-id="6">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (3).png" alt="Monitor Acer Nitro De 23.6 Pulgadas 165Hz" />
+          <p>Monitor Acer Nitro 23.6' 165Hz Fhd $330.000</p>
+          <button class="btn-agregar" data-id="7">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (4).png" alt="Teclado Mecanico Logitech G-Pro Negro" />
+          <p>Teclado Mecanico Logitech G-Pro Black $280.000</p>
+          <button class="btn-agregar" data-id="8">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (5).png" alt="Auriculares Gamer Inalambricos Corsair Blanco" />
+          <p>Auriculares Gamer Inalambricos Corsair White $400.000</p>
+          <button class="btn-agregar" data-id="9">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/Componentes pc (6).png" alt="Auriculares Gamer Logitech G-Pro Negro" />
+          <p>Auriculares Gamer Logitech G-Pro Black $326.000</p>
+          <button class="btn-agregar" data-id="10">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/gabinete (3).png" alt="Gabinete Gamer Syx EO510 Negro Con Cooler Multicolor" />
+          <p>Gabinete Gamer Syx EO510 $267.000</p>
+          <button class="btn-agregar" data-id="11">Agregar al carrito</button>
+        </div>
+
+        <div class="producto" tabindex="0">
+          <img src="../imagenes/memorias ddr (2).png" alt="Memoria Ram DDR5 de 16Gb Mushkin Redline Gris" />
+          <p>Memoria Ram DDR5 16Gb Mushkin Redline $130.000</p>
+          <button class="btn-agregar" data-id="12">Agregar al carrito</button>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer id="footer">
+  <!-- Footer -->
+  <footer class="footer">
     <article class="redes">
-      <h4>SEGUINOS</h4>
-      <a href="#" aria-label="Facebook Punto LAN"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Facebook" /></a>
-      <a href="#" aria-label="Instagram Punto LAN"><img src="../iconos/3721672-instagram_108066.ico" alt="Instagram" /></a>
+      <h1>SEGUINOS</h1>
+      <a href="#" aria-label="Facebook Punto LAN"><img src="../iconos/social_facebook_box_blue_256_30649.ico" alt="Link Para Ir A Nuestro Facebook" /></a>
+      <a href="#" aria-label="Instagram Punto LAN"><img src="../iconos/3721672-instagram_108066.ico" alt="Link Para Ir A Nuestro Instagram" /></a>
     </article>
     <article class="wsp">
-      <h4>COMUNICATE CON NOSOTROS</h4>
+      <h1>COMUNICATE CON NOSOTROS</h1>
       <a href="https://wa.me/5491111111111" aria-label="Contactar por WhatsApp">
-        <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="WhatsApp" />
+        <img src="../iconos/whatsapp_socialnetwork_17360.ico" alt="Link Para Comunicarte Con Nosotros En WhatsApp" />
       </a>
     </article>
     <article class="boton">
@@ -100,9 +136,10 @@
       <button type="button">TÉRMINOS Y CONDICIONES</button>
     </article>
     <article class="logo">
-      <img src="../imagenes/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
+      <img src="../iconos/logopuntolan-DnwV6pvN.ico" alt="Logo Punto LAN" />
       <p>Punto LAN - Derechos Reservados</p>
     </article>
   </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
